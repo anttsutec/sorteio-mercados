@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+<meta content="IE=edge" http-equiv='X-UA-Compatible'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANTT</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- FONT -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!--PRINCIPAL-->
+    <link rel="stylesheet" href="css/global.min.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="header-container" class="container-fluid">
+            <!-- LOADING -->
+            <div id="loading_screen">
+                <div class="loading">
+                    <div id="floatingCirclesG">
+                        <div class="f_circleG" id="frotateG_01"></div>
+                        <div class="f_circleG" id="frotateG_02"></div>
+                        <div class="f_circleG" id="frotateG_03"></div>
+                        <div class="f_circleG" id="frotateG_04"></div>
+                        <div class="f_circleG" id="frotateG_05"></div>
+                        <div class="f_circleG" id="frotateG_06"></div>
+                        <div class="f_circleG" id="frotateG_07"></div>
+                        <div class="f_circleG" id="frotateG_08"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- ICONE - FOTO USUÁRIO -->
+                <div class="col-auto"><i class="fas fa-user"></i></div>
+                <!-- INFO PESSOAIS -->
+                <div class="col-auto">
+                    <p class="mb-0">Bem vindo usuário, <i>Lorem ipsum dolor.</i></p>
+                    <span class="small">Sexta-feira, 13 de agosto de 2018</span>
+                </div>
+                <div class="col-auto btn-content">
+                    <!-- MENU DE NOTIFICAÇÕES -->
+                    <div class="dropdown">
+                        <button class="btn btn-transparent dropdown-toggle nav_notificacao" id="header_notificacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="menu de notificaçoes">
+                            <span class="badge-content">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge badge-light">4</span>
+                            </span>
+                            <span class="btn-txt">Notificações</span>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header_notificacao">
+                            <a class="dropdown-item" href="#"><span> <i class="far fa-calendar-alt"></i> Action</span></a>
+                            <a class="dropdown-item" href="#"><span> <i class="far fa-calendar-alt"></i> Another action</span></a>
+                            <a class="dropdown-item" href="#"><span> <i class="far fa-calendar-alt"></i> Something else here</span></a>
+                        </div>
+                    </div>
+
+                    <!-- SAIR -->
+                    <button class="btn btn-transparent btn-exit" 
+                        data-toggle="modal" 
+                        data-target="#modal_confirm" 
+                        data-title="Sair" 
+                        data-desc="Tem certeza que deseja sair do Siconpar?" 
+                        data-action="exit">
+                        <span>Sair</span><i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAV MENU -->
+    <nav id="mainNav">
+        <div id="nav-container" class="container-fluid">
+
+            <div class="title-content">
+
+                <!-- TITULO DO SISTEMA -->
+                <h1>
+                    <span>
+                        <img src="img/logo-sistema.png" alt="logo do sistema">
+                        <span>
+                            <span>SORTEIO</span>
+                            <span class="small">Mercados</span>
+                        </span>
+                    </span>
+                </h1>
+
+                <div class="dropdown d-md-none nav_notificacao">
+                    <button class="btn btn-transparent dropdown-toggle nav_notificacao" id="nav_notificacao" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="info header">
+                        <span class="badge-content">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge badge-light">4</span>
+                        </span>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="header_notificacao">
+                        <a class="dropdown-item" href="#"><span>Action</span></a>
+                        <a class="dropdown-item" href="#"><span>Another action</span></a>
+                        <a class="dropdown-item" href="#"><span>Something else here</span></a>
+                    </div>
+                </div>
+                
+                <!-- MENU HAMBURGER -->
+                <i data-toggle="class" data-target="#navBarContent" class="fas fa-bars toggleMenu"></i>
+            </div>  
+
+            <div id="navBarContent">
+                
+                <!-- INFO HEADER -->
+                <div class='d-md-none info-header'>
+                    <div class="row">
+                        <div class="col-auto"><i class="fas fa-user"></i></div>
+                        <div class="col-auto">
+                            <p class="mb-0">Bem vindo usuário, <i>Lorem ipsum dolor.</i></p>
+                            <span class="small">Sexta-feira, 13 de agosto de 2018</span>
+                        </div>
+                        <div class="close-button">
+                            <button class="btn btn-transparent" data-toggle="class" data-target="#navBarContent" aria-label="close button">X</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MENU ITEMS -->
+                <ul class="navbar-nav mr-auto"></ul>
+
+                <!-- INFO FOOTER -->
+                <div class="info-footer">
+                    <div>
+                        <img src="img/logo-sutec.png" alt="logo SUTEC">
+                    </div>
+                </div>
+            </div> 
+        </div>  
+    </nav>
+
+    <!-- MAIN -->
+    <main id="main">
+        <div class="main-container">
+            main
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div id="footer-container" class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <i>Atualização feita em 29/04/2024</i>
+                </div>
+                <div class="col-lg-auto ml-auto">
+                    <img src="img/logo-antt.png" alt="logo ANTT">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--JQUERY-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- GLOBAL -->
+    <script src="js/global.js"></script>
+    <!-- MODAL -->
+    <script src="js/apply_modal.js"></script>
+    <!-- TOGGLE EVENTS -->
+    <script src="js/apply_toggle.js"></script>
+
+</body>
+</html>

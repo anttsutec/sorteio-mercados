@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+<meta content="IE=edge" http-equiv='X-UA-Compatible'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANTT</title>
+
+	<!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- SELECT -->
+    <link rel="stylesheet" href="css/select2.min.css">
+    <!-- MESSAGE -->
+    <link rel="stylesheet" href="css/toastr.min.css">
+   	<!--PRINCIPAL-->
+    <link rel="stylesheet" href="css/global.min.css">
+    <!-- INTERNAL -->
+    <link rel="stylesheet" href="css/internal.min.css">
+    <!-- FONT -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+
+<body onload="carregarArquivos()">
+    <!-- <noscript>Os scripts necessários para o funcionamento do sistema não foram carregados</noscript> -->
+
+    <a href="#main" title="Link para o corpo da página" class="sr-only">Pular para o conteúdo principal</a>
+    
+    <!-- MODAL -->
+    <div id="loadModal"></div>
+    
+    <!-- HEADER -->
+    <!-- <header>master - include header</header> -->
+
+    <!-- NAV MENU -->
+    <nav id="mainNav">master - include nav</nav>
+
+    <!-- MAIN -->
+    <main id="main" >
+        <div class="main-container">
+            <form name="uploadArquivoSorteio" method="POST" enctype="multipart/form-data">
+                <!-- SEARCH -->
+                <div class="card card-box">
+                    <div class="card-body">
+                        
+                        <div class="d-sm-flex align-items-center">
+                            <h2>Upload de Arquivo JSON</h2>
+                            <a href="#" id="btnEnviarArquivo" title="Enviar Arquivo" class="btn btn-blue-light ml-auto" onclick="enviarArquivo()">Enviar Arquivo</a>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-6 col-sm">
+                                <div class="form-group">
+                                    <input type="text" id="nomeArquivoFonteSelecionado" name="nomeArquivoFonteSelecionado" class="form-control" placeholder="Selecione o arquivo Json" onclick="arquivoFonteSorteio.click()">
+                                    <input type="file" id="arquivoFonteSorteio" name="arquivoFonteSorteio" style="display: none">
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-white" onclick="arquivoFonteSorteio.click()">Selecionar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIST -->
+                <div class="card card-box">
+                    <div class="card-body">
+                        <!-- LISTA DE RESULTADO -->
+                        <div class="table-responsive">
+                            <table id="tabelaArquivos" class="table-striped table-default" title="Lista de Partidos">
+                                <thead>
+                                    <tr>
+                                        <!-- <th id="tableArquivoFonte">Arquivo Fonte<i class="fas fa-caret-up"></i> <i class="fas fa-caret-down"></i> </th> -->
+                                        <th id="tableArquivoFonte">Arquivo Fonte</th>
+                                        <th id="tableHashArquivoFonte">Hash Arquivo Fonte</th>
+                                        <!-- <th id="tableArquivoResultado">Arquivo Resultado<i class="fas fa-caret-up"></i> <i class="fas fa-caret-down"></i> </th> -->
+                                        <th id="tableArquivoResultado">Arquivo Resultado</th>
+                                        <th id="tableHashArquivoResultado">Hash Arquivo Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listaArquivos">
+                                  <!-- OS ARQUIVOS SERÃO INSERIDOS AQUI -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAGINATION -->
+                <!-- <div class="pagination-content"></div>
+
+                <input type="hidden" value="1" id="searchPage" name="searchPage" class="searchPage"> -->
+
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>master - include footer</footer>
+
+    <!--JQUERY-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- TOGGLE EVENTS -->
+    <script src="js/apply_toggle.js"></script>
+    <!-- MODAL -->
+    <script src="js/apply_modal.js"></script>
+    <!-- MESSAGE -->
+    <script src="js/toastr.min.js"></script>
+    <script src="js/apply_toastr.js"></script>
+    <!-- PAGINATION -->
+    <script src="js/apply_pagination.js"></script>
+    <!-- SELECT -->
+    <script src="js/select2.min.js"></script>
+    <script src="js/apply_select.js"></script>
+    <!-- GLOBAL -->
+    <script src="js/global.js"></script>
+
+    <!-- SCRIPTS QUE FAZEM INTEGRAÇÃO COM O BACKEND -->
+    <script src="js/sorteio.js"></script>
+
+</body>
+</html>

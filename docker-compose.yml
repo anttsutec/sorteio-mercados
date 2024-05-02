@@ -1,0 +1,14 @@
+version: "3"
+services:
+    backend:
+        image: anttsutec/sorteio-mercados-backend
+        container_name: backend
+        ports:
+            - 8001:8001
+    frontend:
+        image: anttsutec/sorteio-mercados-frontend
+        container_name: frontend
+        ports:
+            - 8000:80
+        depends_on:
+            - backend

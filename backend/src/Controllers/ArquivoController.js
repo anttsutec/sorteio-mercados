@@ -35,7 +35,7 @@ exports.post = (req, res, next) => {
     let outputFileHash = md5.createMD5(`output_files/resultado-sorteio${sufixoNomeArquivo}.json`);
 
     //imprime no console o resultado de forma assíncrona
-    imprimeResultadoNoConsole(resultadoJson);
+    // imprimeResultadoNoConsole(resultadoJson);
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(201).send({ "success": true,
@@ -48,7 +48,8 @@ exports.post = (req, res, next) => {
                              "prefixoNome": 'resultado-sorteio',
                              "sufixoNome": sufixoNomeArquivo,
                              "hash": outputFileHash
-                           }
+                           },
+                           "resultadoJson": arquivoResultadoSorteioJson
                           });
   } catch (error) {
     console.error('Error writing JSON data to file:', error);

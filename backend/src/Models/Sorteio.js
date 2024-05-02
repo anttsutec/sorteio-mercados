@@ -49,7 +49,6 @@ function gereEImprimaResultado(mercado, vagas, inscritos) {
 	// imprimaResultado(nomeCurso, semente, embaralhada, vagas, pontoImpressao);
   resultadoJson['semente'] = embaralhada['semente'];
   resultadoJson['resultadoSorteio'] = embaralhada['resultadoSorteio'];
-  resultadoJson['timestamp'] = Date.now();
 
   return resultadoJson;
 }

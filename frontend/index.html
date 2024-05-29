@@ -30,6 +30,26 @@
     <!-- MODAL -->
     <div id="loadModal"></div>
     
+    <!-- TASK MODAL -->
+    <div class="modal fade" id="modal_log" tabindex="-1" role="dialog" aria-labelledby="modal_log-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title" id="modal_log-title">Log do Processamento do Arquivo</span>
+                    <button type="button" id="btn-modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <textarea class="form-control" name="modal_log-text" id="modal_log-text" style="height:60vh; background-color: white;" readonly></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="btn-modal-ok" class="btn btn-blue" data-dismiss="modal">&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <!-- <header>master - include header</header> -->
 
@@ -46,7 +66,7 @@
                         
                         <div class="d-sm-flex align-items-center">
                             <h2>Upload de Arquivo JSON</h2>
-                            <a href="#" id="btnEnviarArquivo" title="Enviar Arquivo" class="btn btn-blue-light ml-auto" onclick="enviarArquivo()">Enviar Arquivo</a>
+                            <a href="#" id="btnEnviarArquivo" title="Enviar Arquivo" class="btn btn-blue-light ml-auto" data-toggle="modal" data-target="#modal_log" onclick="enviarArquivo()">Enviar Arquivo</a>
                         </div>
                         
                         <div class="row">
